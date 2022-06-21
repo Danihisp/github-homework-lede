@@ -1,0 +1,156 @@
+🐛 🐛 🐛 Happy Wednesday, June 15!! 🐛 🐛 🐛
+
+1) Hop onto Slack
+2) Do the Do Now
+3) Get EXCITED!!!
+4) Acknowledge that 🐛 is the pokemon named Caterpie, maybe do a little research on them
+
+
+/flavors/{name}.json
+
+/flavors/wintergreen.json
+
+
+
+1) You need the library installed on your computer - pip install blahblahblah
+2) You need to tell your Python file that you want to use that particular library - import blahblahblah
+
+
+import statistics # This one comes with Python, so no pip install
+import requests # Doesn't come with python, pip install
+
+
+global installation - packages are installed everywhere on your computer all at once for the same Python version - 3.10.3
+let's say something didn't work, we need an older Python version, we install 3.9.6.
+You'd need to reinstall requests (etc) for 3.9.6
+
+"standard library"
+"batteries included"
+
+# Follow-up: Why do we from {package} import {sub} instead of just import {package}
+
+
+
+len(....)
+numbers = [4, 5, 6, 7]
+
+
+median(numbers)
+mean(numbers)
+
+# This won't work!!!!! I have to use the statistics library
+
+import statistics
+statistics.median(numbers)
+statistics.mean(numbers)
+
+
+import statistics as stats
+stats.median(numbers)
+stats.mean(numbers)
+
+
+from statistics import median, mean
+median(numbers)
+median(mean)
+
+
+import requests
+requests.get(url)
+
+# No one does this
+from requests import get
+get(url)
+
+
+
+numbers = [4, 5, 6, 7, 3]
+max = max(numbers)
+
+# How do you know about the built-in functions for Python?
+You'll know just by people explaining the non-built-in ones!
+len(...)
+
+
+
+
+
+https://api.bubblegum.com/gum/887/show.json?APIKEY=b335
+
+
+# Request a list of all gum flavors, and print each flavor’s name
+
+import requests
+
+url = "https://api.bubblegum.com/flavors/list.json?APIKEY=b335"
+response = requests.get(url)
+data = response.json()
+
+data = {
+    'flavors': ['cinnamon', 'bubblegum', 'wintergreen']
+}
+
+print(data['flavors'])
+
+
+flavors = data['flavors']
+for flavor in flavors:
+    print(flavor)
+
+for flavor in data['flavors']:
+    print(flavor)
+
+#  oh is there a way to clear all?  like to clear all var names etc
+
+"Garbage collection"
+del name
+
+
+
+
+# In VS Code...
+data = response.json()
+
+data.keys()
+data['artists']
+data['artists'][0]
+data['artists'][0].keys()
+
+
+# This sets up bash shell
+~/.bash_profile
+# This sets up z shell
+~/.zshrc
+
+# Two ways to fix if you upgrade?
+1) just tell ~/.zshrc to run whatever is in ~/.bash_profile
+2) just copy everything from ~/.bash_profile to ~/.zshrc
+
+
+
+For windows people: pyenv rehash to tell pyenv to look at what was just installed and enable it, then jupyter notebook
+
+
+
+# git      GitHub
+
+
+GitHub - magic land of social coding
+    * complain about peoples' code
+    * see peoples' code
+    * make your own versions of peoples' code
+    * help improve other peoples' code
+    * post your own analysis etc etc
+
+git - the software that GitHub is based on
+    * version control aka making checkpoints
+    * git is version control software that work with... "the cloud"
+    * I can use git to send code to GitHub from my computer
+    * I can use git to send code to other places that aren't GitHub, too
+        - Bitbucket
+        - Gitlab
+        - other stuff
+    * command-line tool
+        - it's awful
+        - when you have a job you''ll have to learn CLI git
+        - I don't want your life to be sad during Lede, so we use GitHub Desktop
